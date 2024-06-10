@@ -4,7 +4,7 @@ from helpers import RandomCourierGeneration
 from scooter_api import CourierMethods
 
 
-@allure.title('Ручка /api/v1/courier')
+@allure.feature('Ручка /api/v1/courier')
 class TestCreateCourier:
     @allure.description('Создание курьера с корректными данными. Получаем код 200 и сообщение \'ок\': true')
     def test_create_courier_success(self, create_and_delete_account_courier):

@@ -2,7 +2,7 @@ import allure
 from scooter_api import CourierMethods, OrderMethods
 
 
-@allure.title('Ручка /api/v1/orders/')
+@allure.feature('Ручка /api/v1/orders/')
 class TestAcceptOrder:
     @allure.description('Успешное принятие заказа курьером. Получаем код 200 и сообщение \'ок\': true')
     def test_accept_order_success(self, create_and_delete_account_courier):

@@ -2,7 +2,7 @@ import allure
 from scooter_api import OrderMethods
 
 
-@allure.title('Ручка /api/v1/orders')
+@allure.feature('Ручка /api/v1/orders')
 class TestGetListOfOrder:
 
     @allure.description('Проверка получения списка заказов. Получаем код 200 и список (не пустой)')
