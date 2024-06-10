@@ -7,7 +7,7 @@ from scooter_api import CourierMethods
 class TestDeleteCourier:
     @allure.description('Успешное уделение курьера. Получаем код 200 и сообщение \'ок\': true')
     def test_delete_courier_success(self):
-        user_data = RandomCourierGeneration.generate_random_courier_data()
+        user_data = RandomCourierGeneration().generate_random_courier_data()
         login_courier = CourierMethods.create_and_login_courier(user_data)
         id_courier = login_courier.json()['id']
         response = CourierMethods.delete_courier(id_courier)

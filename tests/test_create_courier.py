@@ -21,7 +21,7 @@ class TestCreateCourier:
                         'Получаем ошибку 400')
     @pytest.mark.parametrize('field', ['login', 'password'])
     def test_create_courier_empty_field_error(self, field):
-        user_data = RandomCourierGeneration.generate_random_courier_data()
+        user_data = RandomCourierGeneration().generate_random_courier_data()
         payload = user_data
         payload.pop(field)
         response = CourierMethods.create_courier(payload)

@@ -6,11 +6,11 @@ import json
 
 class RandomCourierGeneration:
 
-    @staticmethod
-    def generate_random_courier_data():
-        login = RandomCourierGeneration.generate_random_string(10)
-        password = RandomCourierGeneration.generate_random_string(10)
-        first_name = RandomCourierGeneration.generate_random_string(10)
+    # @staticmethod
+    def generate_random_courier_data(self):
+        login = self.generate_random_string(10)
+        password = self.generate_random_string(10)
+        first_name = self.generate_random_string(10)
         payload = {
             'login': login,
             'password': password,
@@ -18,8 +18,8 @@ class RandomCourierGeneration:
         }
         return payload
 
-    @staticmethod
-    def generate_random_string(length):
+    # @staticmethod
+    def generate_random_string(self, length):
         letters = string.ascii_lowercase
         random_string = ''.join(random.choice(letters) for i in range(length))
         return random_string
